@@ -1,0 +1,17 @@
+<h2>{{question}}</h2>
+
+<ul>
+  {{#each choices}}
+    <li class="list__item">
+      <label for="{{@index}}">
+        <input
+          type="radio"
+          class="list__input"
+          id="{{@index}}"
+          name="choice"
+          value="{{@index}}">
+        {{this}}
+      </label>
+    </li>
+  {{/each}}
+</ul>
