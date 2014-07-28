@@ -5,11 +5,11 @@ define( [
     'underscore',
     'backbone',
     'localstorage',
-    '../model/Question'
-], function( $, _, Backbone, Question ) {
+    'model/Question'
+], function( Question ) {
     var Questions = Backbone.Collection.extend({
         model: Question,
-        localstorage: new Backbone.LocalStorage('QuizAppQuestions')
+        localStorage: new Backbone.LocalStorage( "jQuizAppQuestions" )
     });
 
     return Questions;

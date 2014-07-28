@@ -34,9 +34,7 @@ define( [
             ) {
                 return 'Provide a number between 0 and 3.';
             }
-        },
-
-        // initialize: function() {}
+        }
     });
 
     return Question;

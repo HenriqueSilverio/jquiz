@@ -1,20 +1,25 @@
 'use strict';
 
 define( [
-    './model/question',
-    './collection/questions'
+    'model/question',
+    'collection/questions'
 ], function( Question, Questions ) {
     var init = function() {
-        var question1 = new Question({
+        var question = new Question( {
             question: 'How are you?',
-            choices: [ '1', '2', '3', '4', ],
+            choices: [ '1', '2', '3', '4' ],
             answer: 0
-        });
+        } );
 
-        var Quiz = new Questions( [ question1 ] );
+        var questions = new Questions();
 
-        console.log( Quiz.length );
-        console.log( Quiz.at(0).isValid() );
+        // console.log( questions.length );
+
+        questions.create( question );
+
+        // console.log( questions.length );
+
+        // console.log( Backbone.LocalStorage );
     };
 
     return {
