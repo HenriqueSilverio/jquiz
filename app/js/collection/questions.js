@@ -4,12 +4,12 @@ define( [
     'jquery',
     'underscore',
     'backbone',
-    'localstorage',
-    'model/Question'
-], function( Question ) {
+    'model/question',
+    'localstorage'
+], function( $, _, Backbone, QuestionModel ) {
     var Questions = Backbone.Collection.extend({
-        model: Question,
-        localStorage: new Backbone.LocalStorage( "jQuizAppQuestions" )
+        model: QuestionModel,
+        localStorage: new Backbone.LocalStorage( 'jQuizAppQuestions' )
     });
 
     return Questions;

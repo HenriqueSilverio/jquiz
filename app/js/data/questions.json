@@ -1,0 +1,56 @@
+[
+  {
+    "question": "Teorema de Pitágoras é uma relação matemática que se aplica em triângulos retângulos e tem a seguinte afirmação:",
+    "choices": [
+      "A hipotenusa tem o mesmo valor que os catetos.",
+      "O quadrado da hipotenusa é igual à soma dos catetos.",
+      "O quadrado da hipotenusa é menor que o quadrado dos catetos.",
+      "O quadrado da hipotenusa é igual à soma dos quadrados dos catetos."
+    ],
+    "correctAnswer": 3
+  },
+
+  {
+    "question": "Os triângulos com ângulos menores que 90° e maiores que 90° são chamados respectivamente de:",
+    "choices": [
+      "Acutângulo e Retângulo.",
+      "Obtusângulo e Acutângulo.",
+      "Retângulo e Obtusângulo.",
+      "Acutângulo e Obtusângulo."
+    ],
+    "correctAnswer": 3
+  },
+
+  {
+    "question": "Existem alguns ângulos chamados notáveis, os quais seus valores devem ser conhecidos. Esses ângulos são:",
+    "choices": [
+      "35°, 45° e 60°",
+      "30°, 45° e 60°",
+      "30°, 40° e 65°",
+      "35°, 40° e 65°"
+    ],
+    "correctAnswer": 1
+  },
+
+  {
+    "question": "A palavra “trigonometria” significa medida dos triângulos. Podemos estabelecer seis razões trigonométricas que são:",
+    "choices": [
+      "Seno, Cosseno, Tangente, Cotangente, secante e Cossecante",
+      "Seno, Cosseno, Ângulo, Tangente, Hipotenusa e Catetos",
+      "Cosseno, Tangente, Hipotenusa, Seno, Secante e Cotangente",
+      "Seno, Hipotenusa, Ângulo, Cossecante, Cosseno e Tangente"
+    ],
+    "correctAnswer": 0
+  },
+
+  {
+    "question": "O (pi) é um número irracional e que tem relação com uma das mais importantes figuras da geometria. Essa figura é o:",
+    "choices": [
+      "Triângulo",
+      "Quadrado",
+      "Círculo",
+      "Losango"
+    ],
+    "correctAnswer": 2
+  }
+]

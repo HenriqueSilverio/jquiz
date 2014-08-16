@@ -2,7 +2,7 @@ define(['handlebars', 'templates/helpers/checked'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
-this["JST"]["../app/js/templates/question.handlebars"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["question"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
@@ -33,6 +33,15 @@ function program1(depth0,data,depth1) {
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</ul>\n";
   return buffer;
+  });
+
+this["JST"]["quiz"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"quiz-app\"></div>\n\n<div class=\"controls\">\n  <button id=\"go-prev\">Prev</button>\n  <button id=\"go-next\">Next</button>\n</div>\n";
   });
 
 return this["JST"];

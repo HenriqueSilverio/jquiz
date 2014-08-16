@@ -7,7 +7,7 @@ define([
     'appTemplates'
 ], function( $, _, Backbone, Templates ) {
     var questionView = Backbone.View.extend({
-        template: Templates['../app/js/templates/question.handlebars'],
+        template: Templates['question'],
 
         events: {
             'change input[type="radio"]': 'onChangeOption'
@@ -25,6 +25,7 @@ define([
 
         onChangeOption: function(e) {
             console.log( 'Option has been changed!' );
+            console.log( e );
         }
     });
 

@@ -22,9 +22,12 @@
 
     "browser": true,
     "devel": true,
+    "jquery": true,
 
     "predef": [
         "define",
-        "require"
+        "require",
+        "requirejs",
+        "module"
     ]
 }
