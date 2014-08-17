@@ -10,12 +10,9 @@ define( [
         var quizRouter = new AppRouter();
         Backbone.history.start();
 
-        $.getJSON( 'js/data/questions.json', function( data ) {
+        $.getJSON('js/data/questions.json', function( data ) {
             var allQuestions = data;
-            console.log( allQuestions );
         });
-
-        console.log( quizRouter );
     };
 
     return {

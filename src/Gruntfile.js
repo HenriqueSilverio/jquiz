@@ -83,7 +83,7 @@ module.exports = function( grunt ) {
         handlebars: {
             compile: {
                 options: {
-                    amd: [ 'handlebars', 'templates/helpers/checked' ],
+                    amd: [ 'handlebars', 'templates/helpers/helpers' ],
 
                     processName: function( filePath ) {
                         var pieces = filePath.split( '/' );

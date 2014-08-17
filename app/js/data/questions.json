@@ -7,7 +7,7 @@
       "O quadrado da hipotenusa é menor que o quadrado dos catetos.",
       "O quadrado da hipotenusa é igual à soma dos quadrados dos catetos."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
 
   {
@@ -18,7 +18,7 @@
       "Retângulo e Obtusângulo.",
       "Acutângulo e Obtusângulo."
     ],
-    "correctAnswer": 3
+    "answer": 3
   },
 
   {
@@ -29,7 +29,7 @@
       "30°, 40° e 65°",
       "35°, 40° e 65°"
     ],
-    "correctAnswer": 1
+    "answer": 1
   },
 
   {
@@ -40,7 +40,7 @@
       "Cosseno, Tangente, Hipotenusa, Seno, Secante e Cotangente",
       "Seno, Hipotenusa, Ângulo, Cossecante, Cosseno e Tangente"
     ],
-    "correctAnswer": 0
+    "answer": 0
   },
 
   {
@@ -51,6 +51,6 @@
       "Círculo",
       "Losango"
     ],
-    "correctAnswer": 2
+    "answer": 2
   }
 ]

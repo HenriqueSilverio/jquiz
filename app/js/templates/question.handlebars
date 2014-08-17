@@ -2,7 +2,7 @@
 
 <ul>
   {{#each choices}}
-    <li class="list__item">
+    <li class="list__item {{checked 'selected' @index ../userAnswer}}">
       <label for="{{@index}}">
         <input
           type="radio"
@@ -10,7 +10,7 @@
           id="{{@index}}"
           name="choice"
           value="{{@index}}"
-          {{checked @index ../userAnswer}}>
+          {{checked '' @index ../userAnswer}}>
         {{this}}
       </label>
     </li>

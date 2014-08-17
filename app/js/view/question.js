@@ -24,8 +24,8 @@ define([
         },
 
         onChangeOption: function(e) {
-            console.log( 'Option has been changed!' );
-            console.log( e );
+            this.$( '.selected' ).removeClass( 'selected' );
+            $( e.target ).closest( 'li' ).addClass( 'selected' );
         }
     });
 
