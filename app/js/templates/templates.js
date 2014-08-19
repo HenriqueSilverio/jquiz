@@ -2,6 +2,24 @@ define(['handlebars', 'templates/helpers/helpers'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
+this["JST"]["alert"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<div class=\"alert alert-";
+  if (helper = helpers.type) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.type); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " alert-dismissible\" role=\"alert\">\n  <button type=\"button\" class=\"close\" data-dismiss=\"alert\">\n    <span aria-hidden=\"true\">&times;</span>\n    <span class=\"sr-only\">Close</span>\n  </button>\n  ";
+  if (helper = helpers.message) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.message); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n</div>\n";
+  return buffer;
+  });
+
 this["JST"]["question"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -43,7 +61,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<!--\n<div id=\"quiz-app\"></div>\n\n<div id=\"controls\">\n  <button id=\"go-prev\">Prev</button>\n  <button id=\"go-next\">Next</button>\n</div>\n-->\n\n<main class=\"container\">\n    <span class=\"label\">Vamos começar!</span>\n\n    <header id=\"quiz-header\" class=\"header\">\n        <h1 class=\"title-secondary\">Teste de Matemática I</h1>\n        <p class=\"description\">Algumas perguntas conceituais para você testar seus conhecimentos em matemática.</p>\n    </header>\n\n    <div id=\"quiz-app\" class=\"content\"></div>\n\n    <footer id=\"controls\" class=\"footer margin-top-lg clear\">\n      <button id=\"go-init\" class=\"btn\">Começar teste</button>\n      <button id=\"go-prev\" class=\"btn p-left is-hidden\">Voltar</button>\n      <button id=\"go-next\" class=\"btn p-right is-hidden\">Avançar</button>\n    </footer>\n</main>\n";
+  return "<main class=\"container\">\n    <span class=\"label\">Vamos começar!</span>\n\n    <header id=\"quiz-header\" class=\"header\">\n        <h1 class=\"title-secondary\">Teste de Matemática I</h1>\n        <p class=\"description\">Algumas perguntas conceituais para você testar seus conhecimentos em matemática.</p>\n    </header>\n\n    <div id=\"quiz-app\" class=\"content\"></div>\n\n    <footer id=\"controls\" class=\"footer margin-top-lg clear\">\n      <button id=\"go-init\" class=\"btn\">Começar teste</button>\n      <button id=\"go-prev\" class=\"btn p-left is-hidden\">Voltar</button>\n      <button id=\"go-next\" class=\"btn p-right is-hidden\">Avançar</button>\n    </footer>\n</main>\n";
   });
 
 return this["JST"];

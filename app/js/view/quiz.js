@@ -3,10 +3,12 @@
 define([
     'model/question',
     'collection/questions',
+    'model/alert',
+    'view/alert',
     'view/question',
     'model/quiz',
     'appTemplates'
-], function( QuestionModel, QuestionCollection, QuestionView, QuizModel, Templates ) {
+], function( QuestionModel, QuestionCollection, AlertModel, AlertView, QuestionView, QuizModel, Templates ) {
     var QuizView = Backbone.View.extend({
         template: Templates['quiz'],
 
@@ -27,16 +29,12 @@ define([
         },
 
         onQuizInit: function() {
-            console.log( 'BAIXANDO AS QUESTOES...' );
-
             $.getJSON( 'js/data/questions.json', function( data ) {
                 this.trigger( 'questionsLoaded', data );
             }.bind(this) );
         },
 
         onQuestionsLoaded: function( jsonData ) {
-            console.log( 'QUESTOES BAIXADOS COM SUCESSO!' );
-
             var collectionData = [],
                 allQuestions   = null;
 
@@ -87,11 +85,29 @@ define([
         onGoNext: function() {
             var currentIndex,
                 nextIndex,
+                alertMsg,
+                alertView,
                 theAnswer;
 
             currentIndex = this.model.get( 'current' );
             nextIndex    = currentIndex + 1;
             theAnswer    = this.$( 'input:checked' ).val();
+
+            if( !theAnswer ) {
+                if( !this.$( '#quiz-header .alert' ).html() ) {
+                    alertMsg = new AlertModel({
+                        message: 'Ops! Selecione uma opção.'
+                    });
+
+                    alertView = new AlertView({
+                        model: alertMsg
+                    });
+
+                    this.$( '#quiz-header' ).prepend( alertView.render().el );
+                }
+
+                return;
+            }
 
             this.collection.at( currentIndex ).set({
                 'userAnswer': theAnswer
