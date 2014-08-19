@@ -24,8 +24,8 @@ define([
         },
 
         onChangeOption: function(e) {
-            this.$( '.selected' ).removeClass( 'selected' );
-            $( e.target ).closest( 'li' ).addClass( 'selected' );
+            this.$( '.is-active' ).removeClass( 'is-active' );
+            $( e.target ).closest( 'li' ).addClass( 'is-active' );
         }
     });
 

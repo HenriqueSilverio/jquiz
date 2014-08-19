@@ -1,8 +1,8 @@
 <h2>{{question}}</h2>
 
-<ul>
+<ul class="list">
   {{#each choices}}
-    <li class="list__item {{checked 'selected' @index ../userAnswer}}">
+    <li class="list__item {{checked 'is-active' @index ../userAnswer}}">
       <label for="{{@index}}">
         <input
           type="radio"

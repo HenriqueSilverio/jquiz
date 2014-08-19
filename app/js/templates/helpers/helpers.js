@@ -9,7 +9,7 @@ define( [
                 return str;
             }
 
-            return 'checked'
+            return 'checked';
         }
     } );
 } );
