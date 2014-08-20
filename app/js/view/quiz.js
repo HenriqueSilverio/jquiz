@@ -106,6 +106,10 @@ define([
                     this.$( '#quiz-header' ).prepend( alertView.render().el );
                 }
 
+                this.$( '.alert' ).addClass( 'animated shake' ).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass( 'animated shake' );
+                });
+
                 return;
             }
 
